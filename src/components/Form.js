@@ -28,7 +28,7 @@ export default function Form({onAddItems})
      <select name="select" value={quantity} onChange={(e)=>setQuantity(Number( e.target.value ))}>
      {  Array.from( {length:20},(_,i )=> i + 1 ).map( (i) => <option value={i} key={i}>{ i }  </option>   )  }
      </select>
-     <input name="input" type="text" placeholder="Item.." value={description} onChange={(e)=>setDescription(e.target.value)}/>
+     <input name="input" autoFocus type="text" autoComplete="off" placeholder="Item.." value={description} onChange={(e)=>setDescription(e.target.value)}/>
      <button >Add</button>
     </form>
 
